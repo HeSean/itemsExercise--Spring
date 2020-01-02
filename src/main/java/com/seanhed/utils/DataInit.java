@@ -14,6 +14,7 @@ public class DataInit implements ApplicationRunner {
 	@Autowired
 	ItemRepository itemRepository;
 
+	// Initialize database with items
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		if (itemRepository.count() == 0) {
