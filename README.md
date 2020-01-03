@@ -1,4 +1,4 @@
-Items exercise Backend
+Items exercise Spring Backend
 
 Tools in use:
 
