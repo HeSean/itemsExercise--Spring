@@ -1,7 +1,5 @@
 package com.seanhed.controllers;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -15,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.seanhed.data.beans.Item;
 import com.seanhed.services.ItemServiceImpl;
-import com.seanhed.services.dao.ItemService;
 
 @RestController
 @RequestMapping("/item")

@@ -11,34 +11,32 @@ import com.seanhed.data.repo.ItemRepository;
 @Component
 public class DataInit implements ApplicationRunner {
 
-	@Autowired
-	ItemRepository itemRepository;
-
-	// Initialize database with items
+//	@Autowired
+//	ItemRepository itemRepository;
+//
+//	// Initialize database with items
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-		if (itemRepository.count() == 0) {
-			Item item1 = new Item();
-			item1.setName("Pen");
-			item1.setInventoryCode("ABC");
-			item1.setAmount(5);
-
-			Item item2 = new Item();
-			item2.setName("Notebook");
-			item2.setInventoryCode("DEF");
-			item2.setAmount(5);
-
-			Item item3 = new Item();
-			item3.setName("Eraser");
-			item3.setInventoryCode("HIG");
-			item3.setAmount(10);
-
-			itemRepository.save(item1);
-			itemRepository.save(item2);
-			itemRepository.save(item3);
-
-		}
-
+//		if (itemRepository.count() == 0) {
+//			Item item1 = new Item();
+//			item1.setName("Pen");
+//			item1.setInventoryCode("ABC");
+//			item1.setAmount(5);
+//
+//			Item item2 = new Item();
+//			item2.setName("Notebook");
+//			item2.setInventoryCode("DEF");
+//			item2.setAmount(5);
+//
+//			Item item3 = new Item();
+//			item3.setName("Eraser");
+//			item3.setInventoryCode("HIG");
+//			item3.setAmount(10);
+//
+//			itemRepository.save(item1);
+//			itemRepository.save(item2);
+//			itemRepository.save(item3);
+//		}
 	}
 
 }

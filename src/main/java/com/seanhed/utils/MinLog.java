@@ -6,7 +6,7 @@ import java.io.StringWriter;
 
 /** A low overhead, lightweight logging system.
  * @author Nathan Sweet <misc@n4te.com> */
-public class Log {
+public class MinLog {
 	/** No logging at all. */
 	static public final int LEVEL_NONE = 6;
 	/** Critical errors. The application may no longer work correctly. */
@@ -38,7 +38,7 @@ public class Log {
 	/** Sets the level to log. If a version of this class is being used that has a final log level, this has no affect. */
 	static public void set (int level) {
 		// Comment out method contents when compiling fixed level JARs.
-		Log.level = level;
+		MinLog.level = level;
 		ERROR = level <= LEVEL_ERROR;
 		WARN = level <= LEVEL_WARN;
 		INFO = level <= LEVEL_INFO;
@@ -72,7 +72,7 @@ public class Log {
 
 	/** Sets the logger that will write the log messages. */
 	static public void setLogger (Logger logger) {
-		Log.logger = logger;
+		MinLog.logger = logger;
 	}
 
 	static private Logger logger = new Logger();
@@ -157,10 +157,10 @@ public class Log {
 		if (TRACE) logger.log(LEVEL_TRACE, category, message, null);
 	}
 
-	private Log () {
+	private MinLog () {
 	}
 
-	/** Performs the actual logging. Default implementation logs to System.out. Extended and use {@link Log#logger} set to handle
+	/** Performs the actual logging. Default implementation logs to System.out. Extended and use {@link MinLog#logger} set to handle
 	 * logging differently. */
 	static public class Logger {
 		private final long firstLogTime = System.currentTimeMillis();
